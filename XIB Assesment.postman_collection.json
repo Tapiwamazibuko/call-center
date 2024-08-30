@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "0b6862cc-bca6-44dc-b85e-d58c06202538",
+		"name": "XIB Assesment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33863903"
+	},
+	"item": [
+		{
+			"name": "Agent",
+			"item": [
+				{
+					"name": "/agents",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "/agent/:id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "/agent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Wonder\",\r\n    \"lastName\": \"Woman\",\r\n    \"idNumber\": \"5905115193490\",\r\n    \"managerId\": 10,\r\n    \"teamId\": 12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/agent",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"agent"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Manager",
+			"item": [
+				{
+					"name": "/manager",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Team",
+			"item": [
+				{
+					"name": "/teams",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "/team/:id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "/team",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Boom Comics\",\r\n    \"managerIDs\": [\r\n        110,\r\n        2,\r\n        10\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/team",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"team"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/team/:id/agent",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "/teams/empty",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}
